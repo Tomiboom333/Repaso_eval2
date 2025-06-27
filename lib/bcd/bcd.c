@@ -92,7 +92,7 @@ void BCD_puls(char letra){
       if (numAct < 0) numAct = 99;
     }
     if(letra = 'C'){
-        //reseteo todo
+        numAct=0;
     }
     unidad = numAct % 10;
     decena = numAct / 10;
@@ -100,6 +100,8 @@ void BCD_puls(char letra){
     mostrarUni(unidad);
     mostrarDec(decena);
 }
+
+//falta cambiar a cmsis
 void mostrarUni(int unidad) {
   for (int i = 0; i < 7; i++) {
     digitalWrite(pines1[i], numeros[unidad][i]);//primer BCD
